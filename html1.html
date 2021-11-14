@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<head>
+    <title>SAMPLE 1</title>
+    <style>
+        .sample
+        {
+            color:red;
+        }
+        input{
+            padding:5px;
+            
+        }
+        form{
+            padding:5px;
+        }
+        #svg {
+            position: absolute;
+            left: 50%;
+            right: 20%;
+        }
+        #canvas{
+            border: 2px solid black;
+            position: relative;
+        }
+          
+    </style>
+    <script type = "text/javascript">
+     //document.write("The Session Storage Data would be deleted by the browsers immediately after the session gets terminated.
+
+//To clear a local storage setting you would need to call localStorage.remove('key'); where 'key' is the key of the value you want to remove. If you want to clear a")    
+         if( sessionStorage.hits ) {
+            sessionStorage.hits = Number(sessionStorage.hits) +1;
+         } else {
+            sessionStorage.hits = 1;
+         }
+         document.write("session Total Hits(whenever window closes the reading becomes to 0) :" + sessionStorage.hits );
+      </script>
+
+      <script type = "text/javascript">
+         
+         if( localStorage.hits ) {
+            localStorage.hits = Number(localStorage.hits) +1;
+         } else {
+            localStorage.hits = 1;
+         }
+         document.write("<br>local Total Hits(whenever window closes the reading not changed: " + localStorage.hits );
+      </script>
+</head>
+<body>
+    <!--html atrributes with concepts-->
+    <p class="sample">SECTION TAG USED:</p>
+    <section>
+        <h1>this is our header section</h1>
+    </section>
+    <section>
+        <h2> this is our second section</h2>
+    </section>
+
+<hr>
+<p class="sample">WITHOUT SECTION TAG</p>
+    <h1>this headings with out section tag</h1>
+    <h2> this is second heading</h2>
+<hr>
+<p class="sample">ARTICLE TAG - independent piece of content,blog post</p>
+<p class="sample">article -> section tag used </p>
+<article>
+    GOOD MORNING! WARM WELCOME TO MY BLOG 
+</article>
+<HR>
+<p class="sample">ASIDE ATG - slighting related to rest of the page</p>
+<aside>
+   WARM WELCOMES TO BELOVED ONES!....
+</aside>
+<hr>
+<p class="sample">ARTICLE WITH SECTION</p>
+<p class="sample">ONE ARTICLE CAN MULITIPLE SECTIONS...</p>
+<article>
+    <section> section 1</section>
+    <section>section 2</section>
+</article>
+<hr>
+<p class="sample">HEADER TAG IS USED:</p>
+<header>hi helllo welcome!!!....</header>
+<hr>
+<p class="sample">FOOTER SECTION USED</p>
+<footer>Copyrights@2021
+</footer>
+<hr>
+<p class="sample">NAV TAG IS USED:-- navigationg towards section..</p>
+<p class="sample">nav -> ul -> li</p>
+<nav>
+    good bad nice
+</nav>
+<hr>
+<p class="sample">DIALOG TAG -- USED FOR MARKUP AN CONVERSATION</p>
+<dialog>Hii !! i am dialog tag...</dialog>
+<hr>
+<p class="sample">attritube..section</p>
+<a href="https://www.tutorialspoint.com/html5/html5_attributes.htm">REFER HERE TO ATTRIBUTE SECTION</a>
+<article>
+    <section>
+        background attr should have -- URL
+    </section>
+    <section>
+        bgcolor can have - name, hexadecimal, rgb
+    </section>
+    <section>
+        contenteditable - true/false --user can able to edit the content or not.. 
+    </section>
+    <section>
+        draggable - true, false, auto -- user is able to drag the element or not..
+    </section>
+    <section>
+        hidden - hidden
+    </section>
+    <section>
+        spellcheck - true, false ( correct spelling or gramer checked)
+    </section>
+    <section>
+        custom data attr also can be used -with ( data-age, data-sub etc..,)
+    </section>
+</article>
+<hr>
+<p class="sample">
+    HTML 5 EVENTS -- when hapened it triggers the script tag ..
+    <a href="https://www.tutorialspoint.com/html5/html5_events.htm">refer this</a>
+</p>
+<p class="sample">FORMS 2.0</p>
+<form>
+    <label for="firstname">FIRSTNAME:</label>
+    <input type="text"><br/>
+    <h3> we can use :text, radio, textarea, password, submit, file, image, select, hidden, button : TILL HTML 4 </h3>
+    <H2> WE CAN USE EXTRA: datetime, datetime-local, date, month, week, time, number, range, email, url</H2>
+</form>
+<form>
+    <p class="sample">html 5 tag :</p>
+    <label for="datetime">datatime</label>
+    <input type="datetime"><br/>
+    <label for="date">Date</label>
+    <input type="date"><br/>
+    <label for="number">number</label>
+    <input type="number"><br/>
+    <label for="time">time</label>
+    <input type="time"><br/>
+    <label for="month"> month</label>
+    <input type="month"><br/>
+    <label for="email">email</label>
+    <input type="email"><br/>
+    <label for="hidden">hidden</label>
+    <input type="hidden"><br/>
+    <label for= "range">Range</label>
+    <input type="range" ><br/>
+    <label for="file">file</label>
+    <input type="file"><br/>
+    <label for="week">week</label>
+    <input type="week"><br/>
+    <label for="url">url</label>
+    <input type="url"><br/>
+    <label for="datetime-local">datetime-local</label>
+    <input type="datetime-local"><br/>
+    <hr>
+    <label for="AUTOFOCUS">AUTOFOCUS</label>
+  <input type="textarea"/>
+  <input type="textarea" />
+  <hr>
+  <label for="email">email</label>
+  <input type="email" required/><br/>
+  
+  <input type="submit"><br/>
+</form>
+<p class="sample">SVG - SCALABLE VECTOR GRAPHICS --USED FOR 2-D DIM, X &Y CO-ORDINATES ETC..,</p>
+<p class="sample">TO USE FOLLOWING SYNTAC SHOLULD BE USED</p>
+
+<p class="sample">ATTR::cx - left to right(AGJUSTS THE CIRCLE WITH SEMI TO FULL CIRCLE WITH GIVEN VALUES)::: cy - top to bottom ::: r - radius ::: fill: color</p>
+<svg xmlns="http://www.w3.org/2000/svg" id="svg">
+<circle cx="85" cy="85" r="50" fill="yellow">
+
+</svg>
+<H2> RECTANLE SVG</H2>
+<svg id="svg2" xmlns="http://www.w3.org/2000/svg">
+<rect  height="400" width="100"  fill="purple">
+</svg>
+<h2> line also can be drawn attr: x1,x2 & y1,y2</h2>
+<h2> ellipse also can be drawn attr: x1,x2 & y1,y2</h2>
+<svg id = "svgelem" height = "200" xmlns = "http://www.w3.org/2000/svg">
+         <ellipse cx = "120" cy = "50" rx = "100" ry = "40" fill = "red" />
+      </svg>
+      <svg id = "svgelem" height = "200" xmlns = "http://www.w3.org/2000/svg">
+         <polygon  points = "80,10 300,20, 170,50" fill = "red" />
+      </svg>
+      <h2>SVG GRADIENTS : radialGradient, linearGradient</h2>
+      <hr>
+      <p class="sample">MathML :used to display mathematical expresssioin</p>
+      <math xmlns = "http://www.w3.org/1998/Math/MathML">
+		
+        <mrow>
+           <msup><mi>a</mi><mn>2</mn></msup>
+           <mo>+</mo>
+               
+           <msup><mi>b</mi><mn>2</mn></msup>
+           <mo> = </mo>
+               
+           <msup><mi>c</mi><mn>2</mn></msup>
+        </mrow>
+           
+     </math>
+     < p sample="sample">web storage</p>
+     <p>HTML5 introduces the sessionStorage attribute which would be used by the sites to add data to the session storage, and it will be accessible to any page from the same site opened in that window, i.e., session and as soon as you close the window, the session would be lost</p>
+<p class="sample">  CANVAS; ATTR; width AND height</p>
+   <canvas id="canvas" height="100" width="200"></canvas>
+   <h2> for different shapes refer:</h2>
+   <a href="https://www.tutorialspoint.com/html5/html5_canvas.htm">refer this</a>
+   <hr>
+   <video   width = "300" height = "150" controls >
+    <source src = "video1.mp4" type ="video/mp4" />
+  
+ </video>
+ <hr> 
+ <video  width="300" height="300" controls="controls" poster="walking.jpg">
+<source src="ff10  PATTINATHAI.mp3" type="video/mp4">
+</video>
+
+ <h5> for attr </h5>
+ <a href="https://www.tutorialspoint.com/html5/html5_audio_video.htm">click to refer</a>
+
+ <hr>
+ <audio controls>
+    <source src = "ff10  PATTINATHAI.mp3" type="audio/mp4"/>
+   
+   
+ </audio>
+ <hr>
+</body>
+</html>
